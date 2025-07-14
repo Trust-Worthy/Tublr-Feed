@@ -5,6 +5,7 @@
 
 import UIKit
 import Nuke
+import NukeExtensions
 
 class ViewController: UIViewController, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -19,8 +20,10 @@ class ViewController: UIViewController, UITableViewDataSource {
         
         let post = tumblrPosts[indexPath.row]
         
-        cell.textLabel?.text = post.summary
+        let imageURL = post.photos[0].originalSize.url
+        NukeExtensions.loadImage(with: imageURL, into: cell.posterImageView)
         
+        cell.summaryLabel.text = post.summary
         return cell
     }
     
