@@ -22,6 +22,7 @@ class ViewController: UIViewController, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
     
+    private var tumblrPosts = [Post]
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -56,8 +57,9 @@ class ViewController: UIViewController, UITableViewDataSource {
                 DispatchQueue.main.async { [weak self] in
 
                     let posts = blog.response.posts
-
-
+                    
+                    // Assign the posts
+                    self?.tumblrPosts = posts
                     print("✅ We got \(posts.count) posts!")
                     for post in posts {
                         print("🍏 Summary: \(post.summary)")
