@@ -6,26 +6,20 @@
 //
 
 import UIKit
+import NukeExtensions
 
 class DetailViewController: UIViewController {
     @IBOutlet weak var backdropImageView: UIImageView!
     
+    var post: Post!
+    
     @IBOutlet weak var postContentLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        let postURL = post.photos?[0].originalSize.url
+        NukeExtensions.loadImage(with: postURL, into: backdropImageView)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
