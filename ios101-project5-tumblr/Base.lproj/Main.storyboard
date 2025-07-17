@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="r1R-A8-VYL">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -45,6 +45,7 @@
                                         <connections>
                                             <outlet property="posterImageView" destination="itT-fO-UhD" id="Rxb-xm-8b9"/>
                                             <outlet property="summaryLabel" destination="YJf-Lk-UIa" id="TiV-5V-fjp"/>
+                                            <segue destination="xw4-nt-HvJ" kind="show" id="qoz-8H-x2J"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -53,11 +54,46 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="X7h-zv-fpV"/>
                     <connections>
                         <outlet property="tableView" destination="wIT-dJ-CC5" id="zrL-B7-Tmt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1061.8320610687022" y="3.5211267605633805"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="cnw-j5-eAB">
+            <objects>
+                <viewController id="xw4-nt-HvJ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="68V-xN-UHf">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="6MK-0o-HWw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="L84-VO-HcQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D4y-pc-ryK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1921" y="4"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ZLp-hB-ZJa">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="r1R-A8-VYL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WDU-8R-SN8">
+                        <rect key="frame" x="0.0" y="118" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="o67-T1-j3I"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8AX-1T-V2i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="135.1145038167939" y="3.5211267605633805"/>
         </scene>
