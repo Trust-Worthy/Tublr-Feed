@@ -41,9 +41,9 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hcx-Ce-hJO">
-                                                    <rect key="frame" x="141" y="11" width="243" height="74"/>
+                                                    <rect key="frame" x="141" y="11" width="243" height="69"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -52,6 +52,7 @@
                                         <connections>
                                             <outlet property="posterImageView" destination="itT-fO-UhD" id="Rxb-xm-8b9"/>
                                             <outlet property="summaryLabel" destination="YJf-Lk-UIa" id="TiV-5V-fjp"/>
+                                            <outlet property="titleLabel" destination="Hcx-Ce-hJO" id="dqn-mw-mqx"/>
                                             <segue destination="xw4-nt-HvJ" kind="show" id="qoz-8H-x2J"/>
                                         </connections>
                                     </tableViewCell>
@@ -64,12 +65,11 @@
                     <navigationItem key="navigationItem" id="X7h-zv-fpV"/>
                     <connections>
                         <outlet property="tableView" destination="wIT-dJ-CC5" id="zrL-B7-Tmt"/>
-                        <outlet property="titleLabel" destination="Hcx-Ce-hJO" id="fNV-Cp-zpP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1057.2519083969464" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="1055.7251908396945" y="3.5211267605633805"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="cnw-j5-eAB">

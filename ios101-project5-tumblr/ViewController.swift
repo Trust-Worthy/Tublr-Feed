@@ -23,14 +23,17 @@ class ViewController: UIViewController, UITableViewDataSource {
         let imageURL = post.photos[0].originalSize.url
         NukeExtensions.loadImage(with: imageURL, into: cell.posterImageView)
         
+        // Add the title of the post
+        cell.titleLabel.text = post.title
+        
         cell.summaryLabel.text = post.summary
+        
         return cell
     }
     
 
     @IBOutlet weak var tableView: UITableView!
-    
-    @IBOutlet weak var titleLabel: UILabel!
+
     private var tumblrPosts: [Post] = []
     override func viewDidLoad() {
         super.viewDidLoad()

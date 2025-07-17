@@ -14,13 +14,31 @@ struct Response: Decodable {
 }
 
 struct Post: Decodable {
-
-    /// A brief truncated version of the post caption
+    
+    let title: String
     let summary: String
-
-    /// The full blog post caption
     let caption: String
-    let photos: [Photo]
+    let photos: [Photo]?
+    
+    private enum CodingKeys: String, CodingKey {
+        case blog
+        case summary
+        case caption
+        case photos
+    }
+    
+    private enum BlogKeys: String, CodingKey {
+        case title
+    }
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        
+        // decode summary and caption normally
+        
+        self.summary = try container.decode(String.self, forKey: .summary)
+        self.caption
+    }
 }
 
 struct Photo: Decodable {
