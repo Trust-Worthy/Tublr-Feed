@@ -52,7 +52,6 @@
 		ED59160329BC307D000F25AE = {
 			isa = PBXGroup;
 			children = (
-				67FB37922E25CB7D0084EEC2 /* PostCell.swift */,
 				ED59160E29BC307D000F25AE /* ios101-project5-tumblr */,
 				ED59160D29BC307D000F25AE /* Products */,
 			);
@@ -69,6 +68,7 @@
 		ED59160E29BC307D000F25AE /* ios101-project5-tumblr */ = {
 			isa = PBXGroup;
 			children = (
+				67FB37922E25CB7D0084EEC2 /* PostCell.swift */,
 				ED59160F29BC307D000F25AE /* AppDelegate.swift */,
 				ED59161129BC307D000F25AE /* SceneDelegate.swift */,
 				ED59161329BC307D000F25AE /* ViewController.swift */,
