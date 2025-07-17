@@ -11,14 +11,18 @@ import NukeExtensions
 class DetailViewController: UIViewController {
     @IBOutlet weak var backdropImageView: UIImageView!
     
+    @IBOutlet weak var postTextView: UITextView!
     var post: Post!
     
-    @IBOutlet weak var postContentLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let postURL = post.photos?[0].originalSize.url
         NukeExtensions.loadImage(with: postURL, into: backdropImageView)
+        
+        postTextView.text = post.caption.trimHTMLTags()
     }
     
 
