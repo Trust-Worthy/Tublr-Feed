@@ -20,7 +20,7 @@ class ViewController: UIViewController, UITableViewDataSource {
         
         let post = tumblrPosts[indexPath.row]
         
-        let imageURL = post.photos[0].originalSize.url
+        let imageURL = post.photos?[0].originalSize.url
         NukeExtensions.loadImage(with: imageURL, into: cell.posterImageView)
         
         // Add the title of the post

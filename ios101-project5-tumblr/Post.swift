@@ -37,7 +37,12 @@ struct Post: Decodable {
         // decode summary and caption normally
         
         self.summary = try container.decode(String.self, forKey: .summary)
-        self.caption
+        self.caption = try container.decode(String.self, forKey: .caption)
+        self.photos = try container.decodeIfPresent([Photo].self, forKey: .photos)
+        
+        // decode the blog title
+        let blogContainer = try container.nestedContainer(keyedBy: BlogKeys.self, forKey: .blog)
+        self.title = try blogContainer.decode(String.self, forKey: .title)
     }
 }
 
