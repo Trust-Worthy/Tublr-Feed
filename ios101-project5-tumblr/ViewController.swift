@@ -30,6 +30,7 @@ class ViewController: UIViewController, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var titleLabel: UILabel!
     private var tumblrPosts: [Post] = []
     override func viewDidLoad() {
         super.viewDidLoad()
